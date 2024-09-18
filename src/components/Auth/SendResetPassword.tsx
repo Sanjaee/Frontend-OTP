@@ -15,7 +15,7 @@ const SendResetPassword: React.FC = () => {
     try {
       setLoading(true);
       const response = await axios.post(
-        "http://localhost:8000/auth/send-reset-otp",
+        `${import.meta.env.VITE_API_URL}/auth/send-reset-otp`,
         { email }
       );
       setMessage(response.data.message);

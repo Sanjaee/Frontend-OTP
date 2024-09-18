@@ -23,7 +23,7 @@ const ResetPassword: React.FC = () => {
       setLoading(true);
       setError("");
       const response = await axios.post(
-        `http://localhost:8000/auth/reset-password/${otp}`,
+        `${import.meta.env.VITE_API_URL}/auth/reset-password/${otp}`,
         {
           newPassword,
         }

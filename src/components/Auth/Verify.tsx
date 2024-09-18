@@ -54,7 +54,7 @@ export function InputOTPForm() {
     setLoading(true);
 
     try {
-      await axios.post("http://localhost:8000/auth/verify-otp", {
+      await axios.post(`${import.meta.env.VITE_API_URL}/auth/verify-otp`, {
         email,
         otp: data.pin,
       });
@@ -93,7 +93,7 @@ export function InputOTPForm() {
     const email = Cookies.get("email");
     setLoading(true);
     try {
-      await axios.post("http://localhost:8000/auth/resend-verify-token", {
+      await axios.post(`${import.meta.env.VITE_API_URL}/auth/resend-verify-token`, {
         email,
       });
 
