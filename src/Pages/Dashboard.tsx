@@ -1,7 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import Cookies from "js-cookie";
 import { Button } from "@/components/ui/button";
-import { ChartComponent } from "@/components/Chart/ChartComponent";
 import { DrawerDemo } from "@/components/Chart/DrawerDemo";
 import { DropdownMenuDemo } from "@/components/Menu/DropDown";
 import { useLogin } from "../useLogin";
@@ -31,9 +30,6 @@ const Dashboard = () => {
         <DrawerDemo />
         <DropdownMenuDemo />
         <Button onClick={handleLogout}>Logout</Button>
-      </div>
-      <div className="w-full max-w-[600px]">
-        <ChartComponent />
       </div>
     </div>
   );
